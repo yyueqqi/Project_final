@@ -43,7 +43,7 @@ function App() {
       
       {/* Redirect page to 404 when url out of our url lists */}
       <Route path="/Notfound" element={<Notfound/>}/>
-      <Route path="/404" element={<Navigate to="/NotFoundPage" />} />
+      <Route path="/404" element={<Navigate to="/Notfound" />} />
       <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
     </div>
