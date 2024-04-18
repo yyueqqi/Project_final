@@ -3,18 +3,17 @@ import axios from 'axios';
 
 const apiUrl = 'http://localhost:4000/register'; 
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
   const [pwd, setPwd] = useState('');
 
   const data_body = {
     email: email,
-    name: name,
     pwd: pwd
 }
   const handleSubmit = async(e) => {
     e.preventDefault();
+    window.location.href = '/main';
   
   try {
     const response = await axios.post(apiUrl, data_body);
@@ -28,16 +27,8 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br/>
+    <h1>Login</h1>
+      <form onSubmit={handleSubmit}>    
         <label>Email</label>
         <input
           type="text"
@@ -57,9 +48,11 @@ const Login = () => {
         />
         <br/>
         <input type="submit" value="Submit" />
+        <br/>
+        <a href='/signup'>Signup</a>
       </form>
     </>
   );
 };
 
-export default Login;
+export default Register;

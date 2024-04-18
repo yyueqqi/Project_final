@@ -3,7 +3,10 @@ import './css/index.css';
 import {Route, Routes, Navigate} from 'react-router-dom';
 import './css/App.css';
 // Below This add is import page.
-import Register from "./pages/register_page.js";
+import Signup from "./pages/signup_page.js";
+import Main from "./pages/main_page.js";
+import Login from "./pages/login_page.js";
+
 
 
 
@@ -21,10 +24,12 @@ function App() {
     <div className="App">
       <Routes>
       {/* Start page when open. */}
-      <Route path="/" element={<Navigate to="/register" />} />
+      <Route path="/" element={<Navigate to="/signup" />} />
 
       {/* Added pages and set path. */}
-      <Route path="/register" element={<Register />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/main" element={<Main />} />
+      <Route path="/login" element={<Login />} />
       {/* <Route path="/main" element={LoggedIn?<Main /> : <Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/profile" element={LoggedIn?<Profile/> : <Login />}/>

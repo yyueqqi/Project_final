@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 const apiUrl = 'http://localhost:4000/contract'; 
 
-const LoginForm = () => {
+const Notfound = () => {
   
 
   return (
@@ -16,4 +16,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Notfound;
